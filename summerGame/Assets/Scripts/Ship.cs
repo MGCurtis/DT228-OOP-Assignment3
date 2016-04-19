@@ -9,7 +9,12 @@ public abstract class Ship : MonoBehaviour {
 	public Object Bullet;
 	public Transform shipNose;
 	protected float fDelay;
-	
+
+	protected void Die () 
+	{
+		Destroy(gameObject);
+	}
+
 	protected void Fire () {
 		if(fDelay <= 0)
 		{

@@ -3,7 +3,7 @@ using System.Collections;
 
 public abstract class Bullet : MonoBehaviour {
 
-	private float moveSpeed = 50f;
+	protected float moveSpeed = 50f;
 	public float timer = 75f;
 
 	// Use this for initialization
@@ -12,7 +12,7 @@ public abstract class Bullet : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	protected void Update () {
+	protected virtual void Update () {
 		transform.Translate(new Vector3(0,0,1) * moveSpeed * Time.deltaTime);
 		timer --;
 		if(timer <= 0)

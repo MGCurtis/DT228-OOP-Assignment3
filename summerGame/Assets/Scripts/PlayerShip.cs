@@ -28,6 +28,9 @@ public class PlayerShip : Ship {
 
 		if(Input.GetKey(KeyCode.Space))
 			Fire();
+
+		if(health == 0)
+			Die();
 	}
 
 	void OnTriggerEnter (Collider trig)

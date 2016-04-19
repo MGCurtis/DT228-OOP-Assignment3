@@ -2,14 +2,16 @@
 using System.Collections;
 
 public class eBullet : Bullet {
+	
 
 	// Use this for initialization
 	void Start () {
-	
+		timer = 150f;
+		moveSpeed = 25f;
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	protected override void Update () {
 		base.Update();
 	}
 
