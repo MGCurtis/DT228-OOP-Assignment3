@@ -3,8 +3,8 @@ guid: b71881a38e2c22e428eea03413a64bb0
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
-  - pBullet: {fileID: 102900000, guid: 8a27d267e4676a64583477edd79a8ffd, type: 3}
-  - shipNose: {instanceID: 0}
+  - Bullet: {fileID: 100000, guid: 110a4a4ea97148348bcd64fae2407534, type: 2}
+  - shipNose: {fileID: 400000, guid: aa2b80a3eae1f4c4784365c4da557e1a, type: 2}
   - target: {fileID: 400002, guid: 35a9d7bda10227540b81c49139ef0e3a, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
