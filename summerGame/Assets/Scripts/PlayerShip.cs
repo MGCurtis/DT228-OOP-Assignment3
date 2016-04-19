@@ -29,4 +29,16 @@ public class PlayerShip : Ship {
 		if(Input.GetKey(KeyCode.Space))
 			Fire();
 	}
+
+	void OnTriggerEnter (Collider trig)
+	{
+		if(trig.gameObject.tag == "eBullet")
+			health --;
+	}
+
+	void OnCollisionEnter (Collision collision)
+	{
+		if(collision.gameObject.tag == "Enemy")
+			health --;
+	}
 }
