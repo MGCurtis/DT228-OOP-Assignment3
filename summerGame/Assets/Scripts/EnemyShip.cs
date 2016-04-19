@@ -3,6 +3,8 @@ using System.Collections;
 
 public class EnemyShip : Ship {
 
+	public Transform target;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -10,6 +12,7 @@ public class EnemyShip : Ship {
 	
 	// Update is called once per frame
 	void Update () {
+		transform.LookAt(target);
 	
 	}
 }

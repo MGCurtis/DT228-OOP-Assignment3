@@ -6,15 +6,15 @@ public abstract class Ship : MonoBehaviour {
 	public float moveSpeed = 20f;
 	public float turnSpeed = 100f;
 	public int health = 5;
-	public Object pBullet;
+	public Object Bullet;
 	public Transform shipNose;
-	public float fDelay;
+	protected float fDelay;
 	
 	protected void Fire () {
 		if(fDelay <= 0)
 		{
 			fDelay = 30f;
-			Instantiate(pBullet, shipNose.position, shipNose.rotation);
+			Instantiate(Bullet, shipNose.position, shipNose.rotation);
 		}
 	}
 	
