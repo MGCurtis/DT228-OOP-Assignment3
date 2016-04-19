@@ -15,4 +15,14 @@ public class EnemyShip : Ship {
 		transform.LookAt(target);
 
 	}
+
+	void OnTriggerEnter (Collider trig)
+	{
+		if(trig.gameObject.tag == "pBullet")
+			Destroy(gameObject);
+			//health --;
+		if(trig.gameObject.tag == "Player")
+			Destroy(gameObject);
+			//health --;
+	}
 }
