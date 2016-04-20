@@ -9,6 +9,11 @@ public class PlayerShip : Ship {
 	private int gunTimer = 0;
 	private bool gunPU = false;
 
+	public Shader shader1;
+	public Shader shader2;
+	public Renderer rend;
+
+	
 	protected void Movement () {
 		if(Input.GetKey(KeyCode.W))
 			transform.Translate(new Vector3(0,0,1) * moveSpeed * Time.deltaTime);
@@ -26,7 +31,9 @@ public class PlayerShip : Ship {
 
 	// Use this for initialization
 	void Start () {
-	
+		rend = GetComponentInChildren<Renderer>();
+		shader1 = Shader.Find("Diffuse");
+		shader2 = Shader.Find("Self-Illumin/Diffuse");
 	}
 	
 	// Update is called once per frame
@@ -46,6 +53,12 @@ public class PlayerShip : Ship {
 
 			Fire();
 		}
+
+		if(gunPU == true && rend.material.shader == shader1)
+			rend.material.shader = shader2;
+
+		if(gunPU == false && rend.material.shader == shader2)
+			rend.material.shader = shader1;
 
 		if(gunTimer > 0)
 		{

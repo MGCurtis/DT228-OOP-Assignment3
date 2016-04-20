@@ -7,7 +7,7 @@ public class SceneController : MonoBehaviour {
 	public float enemyXLim = 20f;
 	public float pUYLim = 30f;
 	public float pUXLim = 15f;
-	public int enemyCount = 300;
+	public int enemyCount = 0;
 	public int pUCount = 720;
 
 	public GameObject enemy;
