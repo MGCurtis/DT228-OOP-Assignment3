@@ -18,11 +18,7 @@ public abstract class Ship : MonoBehaviour {
 	}
 
 	protected virtual void Fire () {
-		if(fDelay <= 0)
-		{
-			fDelay = 20f;
-			Instantiate(Bullet, shipNose.position, shipNose.rotation);
-		}
+		Instantiate(Bullet, shipNose.position, shipNose.rotation);
 	}
 	
 

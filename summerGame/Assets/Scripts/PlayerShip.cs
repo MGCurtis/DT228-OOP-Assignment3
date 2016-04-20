@@ -6,7 +6,7 @@ public class PlayerShip : Ship {
 	public float wrapWidth = 35f;
 	public float wrapHeight = 20f;
 
-	private int gunTimer = 300;
+	private int gunTimer = 0;
 	private bool gunPU = false;
 
 	protected void Movement () {
@@ -22,10 +22,6 @@ public class PlayerShip : Ship {
 
 	protected override void Fire () {
 		base.Fire();
-		if(gunPU == true)
-			fDelay = 10;
-		else
-			fDelay = 30;
 	}
 
 	// Use this for initialization
@@ -41,8 +37,24 @@ public class PlayerShip : Ship {
 
 		fDelay --;
 
-		if(Input.GetKey(KeyCode.Space))
+		if(Input.GetKey(KeyCode.Space) && fDelay <= 0)
+		{
+			if(gunPU == true)
+				fDelay = 5;
+			else
+				fDelay = 30;
+
 			Fire();
+		}
+
+		if(gunTimer > 0)
+		{
+			gunTimer --;
+			gunPU = true;
+		}
+
+		if(gunTimer <= 0)
+			gunPU = false;
 
 		if(health == 0)
 			Die();
@@ -52,7 +64,7 @@ public class PlayerShip : Ship {
 			transform.position = new Vector3(-wrapWidth, transform.position.y, transform.position.z);
 		if(transform.position.x < -wrapWidth)
 			transform.position = new Vector3(wrapWidth, transform.position.y, transform.position.z);
-		Debug.Log(transform.position.x);
+		Debug.Log(fDelay);
 		if(transform.position.z > wrapHeight)
 			transform.position = new Vector3(transform.position.x ,transform.position.y, (wrapHeight * -1));
 		if(transform.position.z < -wrapHeight)
@@ -72,7 +84,6 @@ public class PlayerShip : Ship {
 			health ++;
 
 		if(trig.gameObject.tag == "gun")
-			gunPU = true;
 			gunTimer = 300;
 
 	}

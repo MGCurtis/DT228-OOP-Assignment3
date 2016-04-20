@@ -13,11 +13,7 @@ public class EnemyShip : Ship {
 
 	protected override void Fire ()
 	{
-		if(fDelay <= 0)
-		{
-			fDelay = 90f;
-			Instantiate(Bullet, shipNose.position, shipNose.rotation);
-		}
+		base.Fire();
 	}
 
 	// Update is called once per frame
@@ -29,8 +25,11 @@ public class EnemyShip : Ship {
 		fDelay --;
 
 		int n = Random.Range(1, 26);
-		if(n < 2)
+		if(n < 2 && fDelay <= 0)
+		{
+			fDelay = 90f;
 			Fire ();
+		}
 
 		if(health == 0)
 			Die();
