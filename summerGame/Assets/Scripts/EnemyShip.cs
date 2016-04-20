@@ -4,7 +4,7 @@ using System.Collections;
 public class EnemyShip : Ship {
 
 	protected Transform target;
-	public int health = 10;
+	public int health = 3;
 
 	
 	// Use this for initialization

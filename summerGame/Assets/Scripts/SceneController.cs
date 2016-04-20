@@ -9,8 +9,6 @@ public class SceneController : MonoBehaviour {
 	public float pUXLim = 15f;
 	public int enemyCount = 0;
 	public int pUCount = 720;
-	public int healthCount;
-	public int score;
 
 
 	public GameObject enemy;
@@ -20,9 +18,6 @@ public class SceneController : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-
-		healthCount = PlayerShip.health;
-
 	}
 	
 	// Update is called once per frame
@@ -32,8 +27,6 @@ public class SceneController : MonoBehaviour {
 
 		SpawnEnemy();
 		SpawnPowerUp();
-
-		guiText.text = healthCount.ToString();
 	}
 
 	void SpawnEnemy () {

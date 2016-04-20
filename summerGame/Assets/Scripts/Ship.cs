@@ -14,6 +14,7 @@ public abstract class Ship : MonoBehaviour {
 
 	protected void Die () 
 	{
+		Display.score += 50;
 		Destroy(gameObject);
 	}
 
