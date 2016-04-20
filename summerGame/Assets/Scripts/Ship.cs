@@ -4,21 +4,24 @@ using System.Collections;
 public abstract class Ship : MonoBehaviour {
 
 	public float moveSpeed = 20f;
-	public float turnSpeed = 200f;
+	public float turnSpeed = 400f;
 	public int health = 5;
 	public Object Bullet;
 	public Transform shipNose;
 	protected float fDelay;
+
+	protected float xPos;
+	protected float yPos;
 
 	protected void Die () 
 	{
 		Destroy(gameObject);
 	}
 
-	protected void Fire () {
+	protected virtual void Fire () {
 		if(fDelay <= 0)
 		{
-			fDelay = 30f;
+			fDelay = 20f;
 			Instantiate(Bullet, shipNose.position, shipNose.rotation);
 		}
 	}
@@ -31,6 +34,9 @@ public abstract class Ship : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		xPos = transform.position.x;
+		yPos = transform.position.y;
 
+		if(xPos >= Vector3(35)
 	}
 }

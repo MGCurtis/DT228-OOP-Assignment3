@@ -23,6 +23,7 @@ public class PlayerShip : Ship {
 	void Update () {
 
 		Movement();
+		transform.Translate(0,0,0);
 
 		fDelay --;
 
@@ -37,6 +38,7 @@ public class PlayerShip : Ship {
 	{
 		if(trig.gameObject.tag == "eBullet")
 			health --;
+			
 		if(trig.gameObject.tag == "Enemy")
 			health --;
 	}

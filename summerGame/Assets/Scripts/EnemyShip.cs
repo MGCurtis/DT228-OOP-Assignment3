@@ -8,12 +8,23 @@ public class EnemyShip : Ship {
 	// Use this for initialization
 	void Start () {
 		target = GameObject.FindGameObjectWithTag("Player").transform;
-		fDelay = 60f;
+		fDelay = 90f;
 	}
-	
+
+	protected override void Fire ()
+	{
+		if(fDelay <= 0)
+		{
+			fDelay = 90f;
+			Instantiate(Bullet, shipNose.position, shipNose.rotation);
+		}
+	}
+
 	// Update is called once per frame
 	void Update () {
 		transform.LookAt(target);
+
+		transform.Translate(new Vector3(0,0,0.05f));
 
 		fDelay --;
 

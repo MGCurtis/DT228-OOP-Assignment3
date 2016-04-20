@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class eBullet : Bullet {
-	
 
 	// Use this for initialization
 	void Start () {
@@ -11,14 +10,16 @@ public class eBullet : Bullet {
 	}
 	
 	// Update is called once per frame
-	protected override void Update () {
+	void Update () {
 		base.Update();
 	}
 
 	void OnTriggerEnter (Collider trig)
 	{
-		if(trig.gameObject.tag == "Player")
+		if(trig.gameObject.tag == "Player"){
 			Destroy(gameObject);
-		
+			Debug.Log("Hit");
+
+		}
 	}
 }
