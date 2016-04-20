@@ -1,11 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\eBullet.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerShip.cs">
     <Files>
-      <File FileName="Assets\Scripts\eBullet.cs" Line="18" Column="36" />
-      <File FileName="Assets\Scripts\Bullet.cs" Line="18" Column="10" />
-      <File FileName="Assets\Scripts\pBullet.cs" Line="16" Column="1" />
-      <File FileName="Assets\Scripts\PlayerShip.cs" Line="15" Column="3" />
+      <File FileName="Assets\Scripts\eBullet.cs" Line="13" Column="2" />
+      <File FileName="Assets\Scripts\Bullet.cs" Line="6" Column="11" />
+      <File FileName="Assets\Scripts\pBullet.cs" Line="18" Column="32" />
+      <File FileName="Assets\Scripts\PlayerShip.cs" Line="23" Column="3" />
+      <File FileName="Assets\Scripts\EnemyShip.cs" Line="18" Column="14" />
+      <File FileName="Assets\Scripts\Ship.cs" Line="23" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
