@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerShip : Ship {
 
 	public float wrapWidth = 35f;
-	public float wrapHeight = 15f;
+	public float wrapHeight = 20f;
 
 	protected void Movement () {
 		if(Input.GetKey(KeyCode.W))
@@ -37,14 +37,14 @@ public class PlayerShip : Ship {
 			Die();
 
 		
-		if(transform.position.x >= wrapWidth)
+		if(transform.position.x > wrapWidth)
 			transform.position = new Vector3(-wrapWidth, transform.position.y, transform.position.z);
-		if(transform.position.x <= -wrapWidth)
+		if(transform.position.x < -wrapWidth)
 			transform.position = new Vector3(wrapWidth, transform.position.y, transform.position.z);
 		Debug.Log(transform.position.x);
-		if(transform.position.z >= wrapHeight)
+		if(transform.position.z > wrapHeight)
 			transform.position = new Vector3(transform.position.x ,transform.position.y, (wrapHeight * -1));
-		if(transform.position.z <= -wrapHeight)
+		if(transform.position.z < -wrapHeight)
 			transform.position = new Vector3(transform.position.x ,transform.position.y, wrapHeight);
 
 	}
