@@ -10,8 +10,7 @@ public abstract class Ship : MonoBehaviour {
 	public Transform shipNose;
 	protected float fDelay;
 
-	protected float xPos;
-	protected float yPos;
+
 
 	protected void Die () 
 	{
@@ -34,9 +33,6 @@ public abstract class Ship : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		xPos = transform.position.x;
-		yPos = transform.position.y;
 
-		if(xPos >= Vector3(35)
 	}
 }

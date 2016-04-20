@@ -3,6 +3,9 @@ using System.Collections;
 
 public class PlayerShip : Ship {
 
+	public float wrapWidth = 35f;
+	public float wrapHeight = 15f;
+
 	protected void Movement () {
 		if(Input.GetKey(KeyCode.W))
 			transform.Translate(new Vector3(0,0,1) * moveSpeed * Time.deltaTime);
@@ -32,6 +35,18 @@ public class PlayerShip : Ship {
 
 		if(health == 0)
 			Die();
+
+		
+		if(transform.position.x >= wrapWidth)
+			transform.position = new Vector3(-wrapWidth, transform.position.y, transform.position.z);
+		if(transform.position.x <= -wrapWidth)
+			transform.position = new Vector3(wrapWidth, transform.position.y, transform.position.z);
+		Debug.Log(transform.position.x);
+		if(transform.position.y >= wrapHeight)
+			transform.position = new Vector3(transform.position.x ,transform.position.y, wrapHeight);
+		if(transform.position.y >= wrapHeight)
+			transform.position = new Vector3(transform.position.x ,transform.position.y, wrapHeight);
+
 	}
 
 	void OnTriggerEnter (Collider trig)
