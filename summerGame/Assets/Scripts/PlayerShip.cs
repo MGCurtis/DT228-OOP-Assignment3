@@ -12,6 +12,7 @@ public class PlayerShip : Ship {
 	public Shader shader1;
 	public Shader shader2;
 	public Renderer rend;
+	public static int health = 10;
 
 	
 	protected void Movement () {

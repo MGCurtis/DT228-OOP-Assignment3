@@ -4,7 +4,9 @@ using System.Collections;
 public class EnemyShip : Ship {
 
 	protected Transform target;
+	public int health = 10;
 
+	
 	// Use this for initialization
 	void Start () {
 		target = GameObject.FindGameObjectWithTag("Player").transform;

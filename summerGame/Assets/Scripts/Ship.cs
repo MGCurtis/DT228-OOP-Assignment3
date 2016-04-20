@@ -5,7 +5,7 @@ public abstract class Ship : MonoBehaviour {
 
 	public float moveSpeed = 20f;
 	public float turnSpeed = 400f;
-	public int health = 5;
+
 	public Object Bullet;
 	public Transform shipNose;
 	protected float fDelay;
