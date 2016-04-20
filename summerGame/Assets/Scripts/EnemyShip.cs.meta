@@ -4,8 +4,7 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - Bullet: {fileID: 100000, guid: 110a4a4ea97148348bcd64fae2407534, type: 2}
-  - shipNose: {fileID: 400000, guid: aa2b80a3eae1f4c4784365c4da557e1a, type: 2}
-  - target: {fileID: 400002, guid: 35a9d7bda10227540b81c49139ef0e3a, type: 2}
+  - shipNose: {fileID: 400002, guid: b2a0f81d55b9923409d9c950759f8a6f, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

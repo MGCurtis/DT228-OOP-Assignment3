@@ -4,6 +4,8 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - enemy: {fileID: 100004, guid: b2a0f81d55b9923409d9c950759f8a6f, type: 2}
+  - health: {fileID: 100000, guid: 79156e1665dde9d4dbe0db293e41c382, type: 2}
+  - gun: {fileID: 100000, guid: 6605962eb95b35340af7f67367c10662, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
