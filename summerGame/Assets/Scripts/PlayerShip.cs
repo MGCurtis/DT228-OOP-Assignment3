@@ -42,9 +42,9 @@ public class PlayerShip : Ship {
 		if(transform.position.x <= -wrapWidth)
 			transform.position = new Vector3(wrapWidth, transform.position.y, transform.position.z);
 		Debug.Log(transform.position.x);
-		if(transform.position.y >= wrapHeight)
-			transform.position = new Vector3(transform.position.x ,transform.position.y, wrapHeight);
-		if(transform.position.y >= wrapHeight)
+		if(transform.position.z >= wrapHeight)
+			transform.position = new Vector3(transform.position.x ,transform.position.y, (wrapHeight * -1));
+		if(transform.position.z <= -wrapHeight)
 			transform.position = new Vector3(transform.position.x ,transform.position.y, wrapHeight);
 
 	}
