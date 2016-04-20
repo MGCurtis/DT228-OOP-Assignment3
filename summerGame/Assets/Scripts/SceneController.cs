@@ -9,7 +9,7 @@ public class SceneController : MonoBehaviour {
 	public float pUXLim = 15f;
 	public int enemyCount = 0;
 	public int pUCount = 720;
-
+	private int healthCount;
 
 	public GameObject enemy;
 
@@ -24,6 +24,11 @@ public class SceneController : MonoBehaviour {
 	void Update () {
 		enemyCount --;
 		pUCount --;
+
+		healthCount = PlayerShip.health;
+
+		if(healthCount <= 0)
+			Application.LoadLevel("gameOver");
 
 		SpawnEnemy();
 		SpawnPowerUp();

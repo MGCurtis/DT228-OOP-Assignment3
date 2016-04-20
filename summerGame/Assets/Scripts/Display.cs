@@ -9,6 +9,7 @@ public class Display : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		healthCount = PlayerShip.health;
+		score = 0;
 	}
 	
 	// Update is called once per frame

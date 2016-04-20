@@ -35,6 +35,7 @@ public class PlayerShip : Ship {
 		rend = GetComponentInChildren<Renderer>();
 		shader1 = Shader.Find("Diffuse");
 		shader2 = Shader.Find("Self-Illumin/Diffuse");
+		health = 10;
 	}
 	
 	// Update is called once per frame
